@@ -15,24 +15,28 @@ src/
 ## Utilisation
 
 ### Itération 1: Valeur générique
+
 ```rust
 let mut cache = LruCache::new(3);
 cache.put("age".to_string(), 42);
 ```
 
 ### Itération 2: Avec trait
+
 ```rust
 let mut cache = LruCache::new(3);
 cache.insert("x".to_string(), 10);
 ```
 
 ### Itération 3: Clé générique
+
 ```rust
 let mut cache = LruCache::new(3);
 cache.put(1, "one");
 ```
 
 ### Itération 4: Persistance
+
 ```rust
 let mut cache = PersistentLruCache::new_persistent(3, "cache.txt").unwrap();
 cache.put("key".into(), "value".into());
@@ -49,6 +53,7 @@ cargo test
 ## Explication
 
 **LruCache<K, V>** : Cache générique qui couvre les 3 premières itérations
+
 - HashMap pour stockage O(1)
 - Vec pour l'ordre LRU
 - Générique sur K et V dès le départ
