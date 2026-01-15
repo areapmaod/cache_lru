@@ -46,7 +46,7 @@ cargo test
 
 9 tests (5 unitaires + 4 intégration)
 
-## Explication pour le prof
+## Explication
 
 **LruCache<K, V>** : Cache générique qui couvre les 3 premières itérations
 - HashMap pour stockage O(1)
